@@ -1,4 +1,4 @@
-/* css/style.css */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -23,7 +23,7 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-/* Formulários */
+
 .form-container {
     margin-bottom: 30px;
     padding: 20px;
@@ -62,9 +62,9 @@ button[type="submit"]:hover {
     background: #218838;
 }
 
-/* Tabela */
+
 .table-container {
-    overflow-x: auto; /* Adiciona scroll horizontal se a tabela for muito larga */
+    overflow-x: auto;
 }
 
 table {
@@ -92,7 +92,7 @@ tr:hover {
     background-color: #ddd;
 }
 
-/* Botões de Ação */
+
 .actions a {
     text-decoration: none;
     padding: 5px 10px;
