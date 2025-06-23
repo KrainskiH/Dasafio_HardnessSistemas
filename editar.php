@@ -1,7 +1,7 @@
 <?php
 require_once 'config/conexao.php';
 
-// Verificar se o ID foi passado pela URL
+
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     header("Location: index.php");
     exit;
@@ -9,7 +9,7 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 
 $id = $_GET['id'];
 
-// Buscar os dados do cliente no banco
+
 $stmt = $conexao->prepare("SELECT nome, telefone, endereco FROM clientes WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
