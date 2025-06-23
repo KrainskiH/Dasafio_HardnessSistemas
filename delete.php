@@ -1,7 +1,6 @@
 <?php
 require_once 'config/conexao.php';
 
-// Verificar se o ID foi passado pela URL
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     header("Location: index.php");
     exit;
@@ -9,7 +8,6 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 
 $id = $_GET['id'];
 
-// Usar prepared statements
 $stmt = $conexao->prepare("DELETE FROM clientes WHERE id = ?");
 $stmt->bind_param("i", $id);
 
