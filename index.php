@@ -1,5 +1,4 @@
 <?php
-// Incluir o arquivo de conexão
 require_once 'config/conexao.php';
 ?>
 
@@ -48,12 +47,12 @@ require_once 'config/conexao.php';
             </thead>
             <tbody>
                 <?php
-                // Query para selecionar todos os clientes
+            
                 $sql = "SELECT id, nome, telefone, endereco FROM clientes ORDER BY nome";
                 $resultado = $conexao->query($sql);
 
                 if ($resultado->num_rows > 0) {
-                    // Loop através dos resultados e exibi-los na tabela
+                
                     while ($cliente = $resultado->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>" . htmlspecialchars($cliente['id']) . "</td>";
@@ -76,7 +75,6 @@ require_once 'config/conexao.php';
 </div>
 
 <?php
-// Fechar a conexão
 $conexao->close();
 ?>
 
