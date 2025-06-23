@@ -7,13 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $telefone = $_POST['telefone'];
     $endereco = $_POST['endereco'];
 
-    // Validar se o ID não está vazio
     if (empty($id)) {
         header("Location: index.php?status=erro");
         exit;
     }
 
-    // Usar prepared statements
     $stmt = $conexao->prepare("UPDATE clientes SET nome = ?, telefone = ?, endereco = ? WHERE id = ?");
     $stmt->bind_param("sssi", $nome, $telefone, $endereco, $id);
 
